@@ -4,9 +4,13 @@ import './not-found.scss';
 
 function NotFound() {
     return (
-        <div className='not-found'>
-            <div className='not-found-landing-page landing-page'>
-                <LandingPage title='PAGE NOT FOUND' route='/' btn_name='Return Home' />
+        <div className="not-found">
+            <div className="not-found-landing-page landing-page">
+                <LandingPage>
+                    <h1 className="landing-page-inner-item">
+                        404
+                </h1>
+                </LandingPage>
             </div>
         </div>
     );

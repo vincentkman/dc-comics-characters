@@ -1,26 +1,16 @@
-@import '../../utilities/mixins'; 
+@import '../../utilities/mixins';
 @import '../../utilities/variables';
 @import '../../utilities/extends';
-@import '../../utilities/keyframes.scss';
+@import '../../utilities/keyframes';
 
 .landing-page {
     animation: fadeOut 1s;
-    text-align: center;
-    @include flexbox($just: center, $align: center);
+    min-height: calc(100vh - 56px);
     &-inner {
-        background: $light-black;
-        padding: 10px 50px;
-        margin-top: 100px;
-        letter-spacing: $letter-space;
-        border-radius: $br--default;
-        @include mq('medium') {
-            padding: 60px 100px;
-        }
+        padding-top: 130px;
         &-item {
-            color: $white-smoke;
-            font-size: 50px;
-            letter-spacing: $letter-space;
+            text-align: center;
+            color: $white; 
         }
     }
-
 }

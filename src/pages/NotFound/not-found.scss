@@ -1,12 +1,16 @@
-@import '../../utilities/mixins.scss';
-@import '../../utilities/variables.scss';
-@import '../../utilities/extends.scss';
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
 
 .not-found {
     &-landing-page {
-        @include background($url: '../images/background/luigi2.png');
-    }
-    button {
-        @extend %btn-style;
+        @include background($url: '../images/background-fuji.jpg');
+        @include dim(100%, 100%);
+        @include apos($top: 0);
+        z-index: 1000;
+        // &-inner-item {
+        //     align-self: center;
+        //     justify-self: center;   
+        // }
     }
 }

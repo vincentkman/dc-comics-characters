@@ -4,39 +4,25 @@
 
 .navbar {
     @include fpos($top: 0);
-    width: 100%; 
+    width: 100%;
     z-index: 1000;
-    background: $light-red;
+    background: $light-black;
     &-main {
         z-index: 10;
         width: 100%;
         &-icon {
-            color: $light-blue;
             font-size: 30px;
             cursor: pointer;
             padding: 40px;
-            &-gamepad {
+            &-bar {
                 @include mq('medium') {
                     display: none;
                 }
             }
         }
         &-logo {
-            @include apos($top: 20px);
+            @include apos($top: 30px);
             width: 220px;
-        }
-        &-trolley {
-            // position: relative;
-            @include apos($top: 10px, $right: 0);
-            &-item {
-                @include apos($top: 25px, $right: 25px);
-                font-size: 20px;
-                font-weight: $font-weight--bold;
-                color: $strong-blue;
-                background: $green;
-                border-radius: $br--round;
-                padding: 0 8px;
-            }
         }
     }
     &-links {
@@ -44,78 +30,35 @@
         text-align: center;
         height: 0;
         overflow: hidden;
-        transition: $trn; 
+        transition: $trn;
         @include mq('medium') {
-            padding-top: 60px;
-            @include flexbox($just: space-evenly, $align: center);
-            height: 145px;
+            @include flexbox($just: center);
+            height: 100px;
+            transition: none;
         }
         &-item {
             font-size: 20px;
             font-weight: $font-weight--bold;
-            color: $white;
-            transition: $trn; 
+            color: $light-black;
+            transition: $trn;
+            margin: 50px 0;
+            padding: 0 20px;
             &:hover {
-                color: $light-blue;
+                color: $strong-blue;
                 text-decoration: none;
             }
             @include mq('medium') {
                 display: block;
             }
-        }        
+        }
     }
 }
 
 .nav-active {
-    color: $light-blue; 
+    color: $strong-blue;
 }
 
 .show-nav {
-    height: 145px;
+    height: 100px;
 }
 
-// @import '../../utilities/mixins.scss';
-// @import '../../utilities/variables.scss';
-// @import '../../utilities/extends.scss';
-
-// .navbar.default {
-//         @include lin-gradient-cloud(60deg);
-//         // background-color: $light-red;; 
-//         width: 100%;
-//         z-index: 1000;
-//         position: fixed;
-//         text-align: center;
-//         @include mq('medium') {
-//             @include lin-gradient-cloud(10deg);
-//         }
-//         .navbar {   
-//             &-logo {
-//                 width: 250px;
-//             } 
-//             &-item {
-//                 margin-left: 10px;
-//                 margin-right: 10px;
-//             }
-//             &-link {
-//                 font-weight: bold;
-//                 letter-spacing: 1x;
-//                 font-size: 18px;
-//                 outline: none;
-//             }
-//             &-toggler {
-//                 outline: none;
-//             }
-//         }
-//     }
-    
-//     #link {
-//      &:active {
-//          color: white;
-//      }
-//      &:hover {
-//         color: black;
-//      }
-//      &:focus {
-//          color:black;
-//      }   
-//     }

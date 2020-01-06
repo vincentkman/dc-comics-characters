@@ -1,6 +1,6 @@
-@import './utilities/mixins'; 
-@import './utilities/variables';
-@import './utilities/extends';
+@import './utilities/mixins.scss';
+@import './utilities/variables.scss';
+@import './utilities/extends.scss';
 
 * {
   box-sizing: border-box;
@@ -11,16 +11,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.title {
-  font-size: 50px;
-  font-weight: $font-weight--bold;
-  text-transform: capitalize;
-  letter-spacing: $letter-space;
-  text-align: center;
-  margin: 50px 100px;
+img {
+  opacity: 0.6;
 }
 
-.btn-default {
-  @extend %btn-style;
-  background: $red;
+// Font Awesome icons
+i {
+  margin: 0 10px;
 }

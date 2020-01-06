@@ -1,0 +1,92 @@
+@import '../../utilities/mixins.scss';
+@import '../../utilities/variables.scss';
+@import '../../utilities/extends.scss';
+
+.char-info {
+    animation: fadeOut 1s;
+    @extend %dark-theme-bg;
+     h1 {
+        color: $ice;
+    }
+    &-top {
+        @include mq('medium') {
+            @include grid($temp-col: 1fr 1fr 1fr, $temp-row: 1fr);
+        }
+    }
+    &-link {
+        &-btn {
+            @extend %btn-style;
+            background: $purple;
+        }
+    }
+    &-title {
+        text-transform: uppercase;
+        font-size: 25px;
+        @include mq('medium') {
+            text-align: center;
+        }
+    }
+    &-container {
+        @include mq('medium') {
+            @include grid(
+            $gap: 5px,
+            $temp-col: repeat(2, 1fr),
+            $temp-row: repeat(7, auto),
+            // $temp-area: 
+            // 'img first-appearance'
+            // 'img alignment'
+            // 'img race'
+            // 'powerstats powerstats'
+            // 'occupation occupation'
+            // 'base base'
+            // 'group_affiliation group_affiliation'
+            )
+        }
+    }
+    &-img {
+        grid-area: 'img';
+        width: 300px;
+        border-radius: 5px;
+        @include mq('medium') {
+            width: 60%;
+        }
+    }
+    &-first_appearance {
+        grid-area: 'first-appearance';
+    }
+    &-alignment {
+        grid-area: 'alignment';
+    }
+    &-race {
+        grid-area: 'race';
+    }
+    &-powerstats {
+        grid-area: 'powerstats';
+        h3 {
+            color: $ice;
+        }
+        &-box {
+            @include grid($temp-col: 1fr 1fr);
+            
+            span {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-occupation {
+        grid-area: 'occupation';
+    }
+    &-base {
+        grid-area: 'base';
+    }
+    &-group_affiliation {
+        grid-area: 'group_affiliation';
+    }
+
+    span {
+        color: $purple;
+        font-weight: $font-weight--bold;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+}

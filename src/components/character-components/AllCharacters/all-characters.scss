@@ -1,0 +1,11 @@
+@import '../../../utilities/mixins'; 
+@import '../../../utilities/variables';
+@import '../../../utilities/extends';
+
+.all-characters {
+    animation: fadeOut 1s;
+    @include grid(
+        $gap: 50px,
+        $temp-col: repeat(auto-fit, minmax(250px, 1fr))
+    );
+}

@@ -1,4 +1,3 @@
-
 // =======================================
 //   Variables
 // =======================================
@@ -15,7 +14,9 @@ $font-weight--bold      : 700;
 $font-weight--ultra     : 900;
 
 // Descriptive Base Colors 
+$ice            : RGB(170, 212, 229);
 $white          : #fff;
+$light-black    : rgba(0, 0, 0, .8);
 $black          : #0b0b0b;
 $grey           : #eee;
 $blue           : #4682B4;
@@ -27,19 +28,18 @@ $green          : #B2D57C;
 $red            : #ff005b;
 $pink           : #CD6799;
 $yellow         : #F7DF1D;
+
 $soft-red       : #D68C8B;
 
-$light-black    : rgba(0, 0, 0, .8);
-$light-red      : rgba(255, 0, 0, .8);;
+$light-red      : #E8A0A0;
 $light-orange   : #ff4800;
-$light-blue     : rgb(35, 236, 250);
+$light-blue     : #44AAC0;
 $light-purple   : #DCB3EE;
-$light-grey     :#e8eaed;
+$light-grey     : #bbbbbb;
 $light-mulberry : #E1B1EF;
 $light-yellow   : #FFF8DC;
-$light-green    : #B1D57D;
+$light-green    : #33cc33;
 
-$dark-grey      : #bbbbbb;
 $dark-blue      : #3b5998;
 $dark-purple    : #4B4D72;
 $dark-grey      : #888888;

@@ -1,0 +1,48 @@
+@import '../../../utilities/mixins.scss';
+@import '../../../utilities/variables.scss';
+@import '../../../utilities/extends.scss';
+@import '../../../utilities/keyframes.scss';
+
+.all-characters {
+    &-item {
+        &-img {
+            border-radius: 5px;
+            width: 80%;
+            @include flexbox($just: center);
+            margin: 0 auto;
+            @include mq('medium') {
+                width: 90%;
+            }
+        }
+        &-detail {
+            margin: 20px 0;
+            color: $ice;
+            text-align: center;
+            &-first-appearance {
+                color: $light-orange;
+            }
+        }
+        &-link {
+            text-decoration: none;
+            &-btn {
+                @extend %btn-style;
+                @include flexbox($just: center, $align: center);
+                margin: 0 auto;
+                background: $purple;
+                color: $strong-blue;
+            }
+        }
+    }
+}
+
+
+
+
+//     &-container {
+//         @include grid($gap: 50px);
+//         width: 100%;
+//         margin: 0 auto;
+//             @include mq('medium') {
+//             @include grid($temp-col: repeat(auto-fit, minmax(250px, 1fr)));
+//         }
+//     }

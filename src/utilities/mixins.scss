@@ -25,7 +25,7 @@
     $gap: null,
     $temp-col: null,
     $temp-row: null,
-    $temp-area: null
+    $temp-area: null,
     ) {
         display: $disp;
         grid-gap: $gap;
@@ -161,7 +161,7 @@
         @content;
     }
 
-    // ======================================
+// ======================================
 //  Fixed Position Property
 // ======================================
 
@@ -178,6 +178,7 @@
         left: $left;
         @content;
     }
+
 
   // ======================================
   // Slanted effect
@@ -201,17 +202,10 @@
   // ======================================
 
   @mixin background ($url) {
-    // background: linear-gradient($color-bg-light, $color-bg),
-    background: url($url);
-    background-size: contain;
-    // background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    background: linear-gradient(90deg, $color-bg-light, $color-bg),
+    url($url), no-repeat;
+    background-size: cover;
     background-blend-mode: multiply;
-    background-attachment: fixed;
-    @include mq('medium') {
-        background-size: cover;
-    }
 } 
 
 @mixin lin-gradient-cloud($deg) {

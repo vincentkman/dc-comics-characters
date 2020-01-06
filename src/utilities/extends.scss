@@ -8,7 +8,7 @@
 
 %trn {
     opacity: .8;
-    transition: all $trns-duration linear;
+    transition: $trns-duration;
 }
 
 // Mouseover
@@ -49,29 +49,37 @@
 
   %btn-style {
     @extend %mouseover;
-    font-size: 13px;
+    // font-size: 13px;
     font-weight: $font-weight--bold;
-    color: $white-smoke;
     border-radius: $br--default;
     border: none;
     outline: none;
-    padding: 10px 15px;
-    letter-spacing: $letter-space;
-    text-decoration: none;
+    padding: 10px 50px;
   }
 
 // Form Input Box
 
-%input-box-style {
+%form-input {
+    height: 3.5em;
+    width: 100%;
     border-radius: 8px 8px;
-    margin: 10px 0 20px 0;
-    outline: none;
-    transition: all $trns-duration;
     border: none;
-    background-color: $light-grey;
-    &:hover {
-        background-color: $light-yellow;
-    }
+    font-size: 16px;
+    padding: 15px;
+    margin: 15px 0px 20px 0;
+  }
+  
+  %input-box-style {
+    border-radius: 8px 8px;
+    margin: 15px 0px 20px 0;
+    padding: 15px 100px;
+    outline: none;
+    background-color: $light-yellow;
+    transition: all $trns-duration;
+    border-color: $strong-blue;
   }
 
-
+  %dark-theme-bg {
+    background: rgb(0,0,22);
+    background: linear-gradient(90deg, rgba(0,0,22,1) 29%, rgba(0,18,45,1) 61%, rgba(0,36,69,1) 81%, rgba(0,53,91,1) 100%, rgba(0,69,111,1) 100%, rgba(0,98,148,1) 100%, rgba(0,143,206,1) 100%, rgba(0,181,255,1) 100%); padding: 100px;
+  }

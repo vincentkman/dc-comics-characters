@@ -1,9 +1,29 @@
-@import '../../utilities/mixins.scss';
-@import '../../utilities/variables.scss';
-@import '../../utilities/extends.scss';
+@import '../../utilities/mixins'; 
+@import '../../utilities/variables';
+@import '../../utilities/extends';
 
-.home {
+.home{
     &-landing-page {
-        @include background($url: '../images/background/zelda.jpg');
+        @include background($url: '../images/dc.jpg');
+        @include dim(100%, 100%);
+        @include apos($top: 0);
+        z-index: 1000;
+    }
+    &-link {
+        @include grid(
+            $temp-col: repeat(3, 1fr), 
+            $temp-row: 450px,
+            $temp-area: '. centered-box .'
+            );
+            &:hover {
+                text-decoration: none;
+            }
+         &-btn {
+            @extend %btn-style;
+            grid-area: centered-box;
+            align-self: center;
+            justify-self: center;   
+            padding: 20px;  
+        }
     }
 }
