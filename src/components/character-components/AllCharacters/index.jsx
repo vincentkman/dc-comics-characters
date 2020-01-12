@@ -1,26 +1,12 @@
-import React from 'react';
-import { CharacterConsumer } from '../../../context';
+import React, { useContext } from 'react';
+import { CharacterContext } from '../../../context';
 import CharacterItems from '../CharacterItems';
 import Loading from '../../Loading';
 
 function AllCharacters() {
-    return (
-        <CharacterConsumer>
-            {allCharacters => {
-                const { characters, sortedCharacters, loading } = allCharacters;
-                return (
-                    <>
-                        {
-                            loading ? <Loading /> :
-                                <div>
-                                    <CharacterItems characters={characters} />
-                                </div>
-                        }
-                    </>
-                );
-            }}
-        </CharacterConsumer>
-    )
+    const { loading, characters } = useContext(CharacterContext);
+    return loading ? <Loading /> :
+        <CharacterItems characters={characters} />
 }
 
 export default AllCharacters;

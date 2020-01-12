@@ -1,34 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Character from '../Character';
-import { CharacterConsumer } from '../../../context';
+import { CharacterContext } from '../../../context';
 import Loading from '../../Loading';
 import '../AllCharacters/all-characters.scss';
 
 function CharactersItems({ characters }) {
-    return (
-        <CharacterConsumer>
-            {characterItem => {
-                const { loading } = characterItem;
-                return (
-                    <>
-                        {
-                            loading ? <Loading /> :
-                                <div className='all-characters'>
-                                    {
-                                        characters.map(item => (
-                                            <Character
-                                                key={item.id}
-                                                {...item}
-                                            />
-                                        ))
-                                    }
-                                </div>
-                        }
-                    </>
-                );
-            }}
-        </CharacterConsumer>
-    )
+    const { loading } = useContext(CharacterContext);
+    return loading ? <Loading /> :
+        <div className='all-characters'>
+            {
+                characters.map(item => (
+                    <Character
+                        key={item.id}
+                        {...item}
+                    />
+                ))
+            }
+        </div>
 }
 
 export default CharactersItems;

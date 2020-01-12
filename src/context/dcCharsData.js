@@ -152,43 +152,43 @@ export const profiles = [
     //         relatives: "Zeus (father), Hera (mother), Enyo (wife), Deimos, Phobos, Alexander (sons), Neptune, Pluto (uncles), Demeter, Hestia (aunts), Hephaestus (brother), Apollo, Dionysus, Hercules, Hermes(half-brothers), Artemis, Pallas Athena, Venus, (half-sisters)",
     //     image_url: "https://www.superherodb.com/pictures2/portraits/10/100/1118.jpg"
     // },
-    // {
-    //     id: "Atom",
-    //     name: "Atom",
-    //         intelligence: "null",
-    //         strength: "null",
-    //         speed: "null",
-    //         durability: "null",
-    //         power: "null",
-    //         combat: "null",
-    //         fullname: "Albert Pratt",
-    //         alter_egos: "No alter egos found.",
-    //         aliases: [
-    //             "Little Superman",
-    //             "the Mighty Mite"
-    //         ],
-    //         place_of_birth: "-",
-    //         first_appearance: "All American Comics #19",
-    //         publisher: "DC Comics",
-    //         alignment: "good",
-    //         gender: "Male",
-    //         race: "null",
-    //         height: [
-    //             "5'10",
-    //             "178 cm"
-    //         ],
-    //         weight: [
-    //             "150 lb",
-    //             "68 kg"
-    //         ],
-    //         eye_color: "Blue",
-    //         hair_color: "Red",
-    //         occupation: "Adventurer, Retired Professor of Nuclear Physics",
-    //         base: "GBS Building, Gotham City (former) Calvin College on Earth-Two",
-    //         group_affiliation: "formerly Justice Society of America; formerly All-Star Squadron",
-    //         relatives: "Mary James (wife, deceased), Grant Albert Emerson (Damage, son), Albert Rothstein (aka Nuklon / Atom-Smasher, godson)",
-    //     image_url: "https://www.superherodb.com/pictures2/portraits/10/100/934.jpg"
-    // },
+    {
+        id: "Atom",
+        name: "Atom",
+            intelligence: "null",
+            strength: "null",
+            speed: "null",
+            durability: "null",
+            power: "null",
+            combat: "null",
+            fullname: "Albert Pratt",
+            alter_egos: "No alter egos found.",
+            aliases: [
+                "Little Superman",
+                "the Mighty Mite"
+            ],
+            place_of_birth: "-",
+            first_appearance: "All American Comics #19",
+            publisher: "DC Comics",
+            alignment: "good",
+            gender: "Male",
+            race: "null",
+            height: [
+                "5'10",
+                "178 cm"
+            ],
+            weight: [
+                "150 lb",
+                "68 kg"
+            ],
+            eye_color: "Blue",
+            hair_color: "Red",
+            occupation: "Adventurer, Retired Professor of Nuclear Physics",
+            base: "GBS Building, Gotham City (former) Calvin College on Earth-Two",
+            group_affiliation: "formerly Justice Society of America; formerly All-Star Squadron",
+            relatives: "Mary James (wife, deceased), Grant Albert Emerson (Damage, son), Albert Rothstein (aka Nuklon / Atom-Smasher, godson)",
+        image_url: "https://www.superherodb.com/pictures2/portraits/10/100/934.jpg"
+    },
     {
         id: "Bane",
         name: "Bane",

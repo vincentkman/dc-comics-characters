@@ -1,61 +1,40 @@
-import React from 'react';
-import { profiles } from './dcCharsData';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const CharacterContext = React.createContext();
-const CharacterConsumer = CharacterContext.Consumer;
 
-class CharacterProvider extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            navbarOpen: false,
-            loading: true,
-            characters: [],
-            sortedCharacters: [],
-        }
+function CharacterProvider({ children }) {
+    const [loading, setLoading] = useState(false);
+    const [characters, setCharacters] = useState([]);
+    const [navbarOpen, setNavbarOpen] = useState(false);
+
+    useEffect(() => {
+        const url = 'https://5e11f56184b3db00149766e5.mockapi.io/api/v1';
+        setLoading(true);
+        axios
+            .get(`${url}/characters`)
+            .then(response => {
+                setCharacters(response.data);
+                setLoading(false);
+            });
+            return () => {}
+    }, []);
+
+    const navbarToggleHandler = () => {
+        return !navbarToggleHandler ? setNavbarOpen(true) : setNavbarOpen(false)
     }
 
-    componentDidMount() {
-        this.setItems(profiles);
-    }
-
-    setItems = (profiles) => {
-        const characters = profiles.map(char => {
-            const character = { ...char };
-            return character;
-        });
-        this.setState({
+    return (
+        <CharacterContext.Provider value={{
+            loading,
             characters,
-            sortedCharacters: characters,
-            loading: false
-        });
-    }
+            navbarOpen,
+            navbarToggleHandler,
+        }}>
+            {children}
+        </CharacterContext.Provider>
+    );
 
-    navbarToggleHandler = () => {
-        this.setState({
-            navbarOpen: !this.state.navbarOpen
-        });
-    }
-
-    getCharacter = (id) => {
-        const tempCharacters = [...this.state.characters];
-        const character = tempCharacters.find(item => item.id === id);
-        return character;
-    }
-
-    render() {
-        return (
-            <div>
-                <CharacterContext.Provider value={{
-                    ...this.state,
-                    navbarToggleHandler: this.navbarToggleHandler,
-                    getCharacter: this.getCharacter,
-                }}>
-                    {this.props.children}
-                </CharacterContext.Provider>
-            </div>
-        );
-    }
 }
 
-export { CharacterProvider, CharacterConsumer, CharacterContext };
+export { CharacterProvider, CharacterContext };

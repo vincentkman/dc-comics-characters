@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { CharacterContext } from '../../context';
 import { Link, Redirect, useParams } from 'react-router-dom';
-import Loading from '../../components/Loading';
 import './character-info.scss';
 
 function CharacterInfo() {
@@ -9,9 +8,7 @@ function CharacterInfo() {
     const { characters } = useContext(CharacterContext);
     const character = characters.find(item => item.id === id);
     if (!character) {
-        // return <Redirect to='/not-found' />;
-        // return <Loading />;
-        return <div></div>
+        return <Redirect to='/not-found' />;
     }
     const { name, image_url, first_appearance, alignment, race, occupation, intelligence, strength, speed, durability, power, combat, base, group_affiliation } = character;
     return (

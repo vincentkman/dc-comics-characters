@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <CharacterProvider>
         <Router>
-          <div>
+          <>
             <Navbar />
             <Switch>
               <Route exact={true} path='/' component={Home} />
@@ -24,8 +24,8 @@ function App() {
               <Route path='/characters/:id' component={CharacterInfo} />
               <Route component={NotFound} />
             </Switch>
-            {/* <Footer /> */}
-          </div>
+            <Footer />
+          </>
         </Router>
       </CharacterProvider>
     </div>
