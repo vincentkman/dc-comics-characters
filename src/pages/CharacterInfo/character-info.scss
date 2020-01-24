@@ -9,6 +9,7 @@
         color: $ice;
     }
     &-top {
+        margin: 100px;
         @include mq('medium') {
             @include grid($temp-col: 1fr 1fr 1fr, $temp-row: 1fr);
         }
@@ -45,6 +46,7 @@
     }
     &-img {
         grid-area: 'img';
+        margin-bottom: 50px;
         width: 300px;
         border-radius: 5px;
         @include mq('medium') {
